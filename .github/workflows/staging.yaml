@@ -34,4 +34,4 @@ jobs:
           SLACK_TITLE: Massage
           SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: "URL:" https://testindexstaging.web.app/
+          SLACK_MESSAGE: https://testindexstaging.web.app/
