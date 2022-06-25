@@ -31,8 +31,8 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: testworkch
-          SLACK_TITLE: Info
+          SLACK_TITLE:
           SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: https://testindexstaging.web.app/
-          MSG_MINIMAL: event
+          SLACK_MESSAGE: "Massage: Url:" https://testindexstaging.web.app/
+          MSG_MINIMAL: event, ref
