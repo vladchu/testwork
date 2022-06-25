@@ -35,3 +35,4 @@ jobs:
           SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_MESSAGE: https://testindexstaging.web.app/
+          MSG_MINIMAL: event,actions url,commit
