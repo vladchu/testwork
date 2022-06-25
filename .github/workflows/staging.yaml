@@ -5,10 +5,11 @@ name: GitHub-staging
 on:
   push:
     branches: [ staging ]
-    
+
 
 jobs:
-  deploy: 
+
+  deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
@@ -18,20 +19,18 @@ jobs:
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-        env: 
+        env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          
-   messageSlack:
+
+  messageSlack:
+    name: Sender
     runs-on: ubuntu-latest
     steps:
-    - name: Notification Slack
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: testworkch
-        SLACK_TITLE: Post Title
-        SLACK_USERNAME: BotCI
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "This is your custom message2."
-    
-
-
+      - name: Notification Slack
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: testworkch
+          SLACK_TITLE: Post Title
+          SLACK_USERNAME: BotCI
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: "This is your custom message2."
