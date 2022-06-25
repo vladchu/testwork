@@ -25,7 +25,7 @@ jobs:
   messageSlack:
     name: Sender
     runs-on: ubuntu-latest
-    need: deploy
+    needs: deploy
     steps:
       - name: Notification Slack
         uses: rtCamp/action-slack-notify@v2
