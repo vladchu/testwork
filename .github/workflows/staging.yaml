@@ -34,5 +34,5 @@ jobs:
           SLACK_TITLE: Info
           SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_MESSAGE: "This is your custom message2."
+          SLACK_MESSAGE: "Repo: ${{ env.GITHUB_REPOSITORY }}/n Push: ${{ env.GITHUB_PATH }}"
           MSG_MINIMAL: event
