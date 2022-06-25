@@ -31,7 +31,7 @@ jobs:
         SLACK_TITLE: Post Title
         SLACK_USERNAME: BotCI
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "This is your custom message."
+        SLACK_MESSAGE: "This is your custom message2."
     
 
 
