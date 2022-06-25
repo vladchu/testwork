@@ -25,12 +25,14 @@ jobs:
   messageSlack:
     name: Sender
     runs-on: ubuntu-latest
+    need: deploy
     steps:
       - name: Notification Slack
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: testworkch
-          SLACK_TITLE: Post Title
-          SLACK_USERNAME: BotCI
+          SLACK_TITLE: Info
+          SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_MESSAGE: "This is your custom message2."
+          MSG_MINIMAL: event
