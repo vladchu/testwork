@@ -30,7 +30,7 @@ jobs:
       - name: Notification Slack
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_CHANNEL: testworkch
+          SLACK_CHANNEL: testwork-ch
           SLACK_TITLE: Massage
           SLACK_USERNAME: vladchu
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
