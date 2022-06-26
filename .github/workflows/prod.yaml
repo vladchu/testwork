@@ -30,7 +30,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v1
       - name: Push to Firebase
-        uses: w9jds/firebase-action@master
+        uses: w9jds/firebase-action@master444
         with:
           args: deploy --only hosting
         env:
